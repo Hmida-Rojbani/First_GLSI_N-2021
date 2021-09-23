@@ -4,12 +4,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import de.tekup.first.services.HelloService;
+
 @RestController
 public class HelloCtrl {
 	
+	private HelloService service = new HelloService();
+	
 	@RequestMapping(path = "/hello")
 	public String sayHello() {
-		return "Hello World !";
+		return service.getHello();
 	}
 	
 	@RequestMapping(path = "/hello/{value}")
