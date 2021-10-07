@@ -1,12 +1,9 @@
 package de.tekup.first.services;
 
-import org.springframework.stereotype.Service;
-
-@Service 
-public class HelloService {
+public interface HelloService {
 	
-	public String getHello() {
-		return "Hello Worlds !!";
-	}
+	public String getHello();
+
+	public String getHelloName(String name);
 
 }
